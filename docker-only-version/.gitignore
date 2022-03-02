@@ -1,0 +1,5 @@
+/graphite
+command.txt
+/celery_app/__pycache__
+notebooks/.ipynb_checkpoints
+mongoDB.csv

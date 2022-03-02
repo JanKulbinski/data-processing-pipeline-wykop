@@ -1,0 +1,16 @@
+FROM python:3
+
+ENV TZ="Europe/Warsaw"
+RUN echo $TZ > /etc/timezone
+
+WORKDIR /app/
+
+ADD requirements.txt ./requirements.txt
+ADD ./celery_app/ ./celery_app/
+
+ENV TYPE="worker"
+ENV RABBITHOST="rabbit"
+
+RUN pip install -r requirements.txt
+
+ENTRYPOINT celery --app=celery_app.main:app $TYPE -l INFO
