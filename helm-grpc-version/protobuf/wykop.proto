@@ -1,0 +1,15 @@
+
+syntax = "proto3";
+
+message Post {
+    string text = 1;
+    string date = 2;
+    string comments_num = 3;
+}
+message PredictedPluses {
+    int64 value = 1;
+}
+
+service ModelService {
+    rpc Test(Post) returns (PredictedPluses) {}
+}
