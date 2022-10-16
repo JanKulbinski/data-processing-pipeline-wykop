@@ -15,4 +15,4 @@ Whole project was deployed only with use of docker. To present results of ML mod
 
 **helm-grpc-version**
 
-Whole project was deployed on Kubernetes using Helm. Helm charts from Artifact Hub (e.g mongo, grafana, graphite, rabbit) were used as well as own charts (grpc, celery-app, celery-app-beater - created from dockerfile '../docker-only-version'). In addition GRPC server was deployed in order to provide a way of communication with trained model.
+Whole project was deployed on Kubernetes using Helm. Helm charts from Artifact Hub (mongo, grafana, graphite, rabbit) were used as well as own charts (grpc, celery-app, celery-app-beater - created from dockerfile '../docker-only-version'). In addition GRPC server was deployed in order to provide a way of communication with trained model.
