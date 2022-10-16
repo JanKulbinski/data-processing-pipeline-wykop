@@ -3,7 +3,7 @@ import os
 from typing import Collection
 from pymongo import MongoClient
 
-mongo_pass = os.getenv("MONGO_PASS", "example")
+mongo_pass = os.getenv("MONGO_PASS")
 
 client = MongoClient(f"mongodb://root:{mongo_pass}@mongo:27017/")
 db = client["wykopDB"]

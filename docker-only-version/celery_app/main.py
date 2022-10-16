@@ -5,10 +5,12 @@ import statsd
 
 
 rabbit_url = os.getenv("RABBITHOST", "localhost")
+rabbit_pass = os.getenv("RABIT_PASSWORD")
+rabbit_user = os.getenv("RABIT_USER")
 
 app = Celery(
     "celery_app",
-    broker=f"amqp://guest:guest@{rabbit_url}:5672",
+    broker=f"amqp://{rabbit_user}:{rabbit_pass}@{rabbit_url}:5672",
     backend="rpc://",
     include=["celery_app.tasks"],
 )
