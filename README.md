@@ -1,9 +1,8 @@
 # data-processing-pipeline-wykop
-This project is a machine learning pipeline which consists of componets to scrap, clean, preprocess and model data from polish social media site in order to predict number of likes for given post. Statistics about this process can be seen in grafana dashboard.
+This project is a machine learning pipeline which consists of components to scrap, clean, preprocess and model data from polish social media site in order to predict number of likes for given post. Statistics about this process can be seen in grafana dashboard.
 
 ## Architecture
 ![architecture](./architecture.png)
-
 
 ## Deployment
 Project was deployed in 2 diffrent versions, placed in seperate directory.
